@@ -1,0 +1,81 @@
+[data-theme="dark"] {
+  --color-primary: #60A5FA;
+  --color-primary-light: #93C5FD;
+  --color-primary-dark: #3B82F6;
+  
+  --color-secondary: #8B5CF6;
+  --color-secondary-light: #A78BFA;
+  --color-secondary-dark: #7C3AED;
+  
+  --color-accent: #EC4899;
+  --color-accent-light: #F472B6;
+  --color-accent-dark: #DB2777;
+  
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-tertiary: #334155;
+  
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-tertiary: #94a3b8;
+  
+  --color-border: #334155;
+  --color-border-light: #475569;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: var(--space-4);
+  cursor: pointer;
+}
+
+.light-icon, .dark-icon {
+  font-size: var(--font-size-lg);
+  transition: opacity var(--transition-normal);
+}
+
+[data-theme="light"] .dark-icon,
+[data-theme="dark"] .light-icon {
+  opacity: 0.5;
+}
+
+.toggle-track {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-normal);
+  padding: 0.25rem;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-bg-primary);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+[data-theme="dark"] .toggle-track {
+  background-color: var(--color-secondary);
+}
+
+[data-theme="dark"] .toggle-thumb {
+  transform: translateX(1.5rem);
+}
