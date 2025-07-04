@@ -1,0 +1,41 @@
+/* Import all CSS styles */
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'animations.css';
+@import 'dark-mode.css';
+@import 'responsive.css';
+
+/* Certificates Section */
+.certificates {
+  /* padding: var(--section-padding-y) 0; */ /* Consider uncommenting if you have a section-padding-y variable */
+}
+
+.certificates-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: var(--space-6);
+  padding-bottom: var(--space-4); /* Add padding for the scrollbar */
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+.certificates-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certificates-grid::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  border-radius: 10px;
+}
+
+.certificates-grid::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+
+.certificates-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
